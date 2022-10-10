@@ -8,7 +8,6 @@ void Dijkstra(int Graph[MAX][MAX], int n, int start) {
   int cost[MAX][MAX], distance[MAX], pred[MAX];
   int visited[MAX], count, mindistance, nextnode, i, j;
 
-  // Creating cost matrix
   for (i = 0; i < n; i++)
     for (j = 0; j < n; j++)
       if (Graph[i][j] == 0)
@@ -45,7 +44,6 @@ void Dijkstra(int Graph[MAX][MAX], int n, int start) {
     count++;
   }
 
-  // Printing the distance
   for (i = 0; i < n; i++)
     if (i != start) {
       printf("\nDistance from source to %d: %d", i, distance[i]);
